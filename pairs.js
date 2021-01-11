@@ -17,10 +17,23 @@
 * - It returns an empty array if it gets passed nothing:
 *       pairs() returns []
 ****************************************************************/
-function pairs(names) {
-  // Your code goes here
+function pairs(names) { 
+let pairings = [];
+if (names==false || names==="" || names===undefined) return []
+else if (!(names.length % 2)) { 
+  let x = parseInt(names.length/2)
+  for (let i=0; i < x; i++) {
+  pairings [i] = [names.getRandom(), names.getRandom()]}
+  return pairings }
+else { 
+  let x = parseInt(names.length/2)
+  for (let i=0; i < x; i++) {
+  pairings [i] = [names.getRandom(), names.getRandom()]
 }
-
+  pairings [x] = [names.getRandom()]
+  return pairings
+}
+}
 module.exports = pairs;
 
 /**********************************************
